@@ -9,12 +9,12 @@
     text-decoration: none;
 }
 
-@mixin box-sizing($box-model){
+@mixin box-sizing($box-model) {
     box-sizing: $box-model;
 }
 
-@mixin background-imagen($imagen) {    
-    background-image: url($imagen); 
+@mixin background-imagen($imagen) {
+    background-image: url($imagen);
     background-repeat: no-repeat;
     background-position: center center;
 }
@@ -26,19 +26,38 @@
 //Media queries
 
 @mixin telefono {
-    @media only screen and (min-width:#{$telefono}){
+    @media only screen and (min-width:#{$telefono}) {
         @content;
     }
 }
 
 @mixin tablet {
-    @media only screen and (min-width:#{$tablet}){
+    @media only screen and (min-width:#{$tablet}) {
         @content;
     }
 }
 
 @mixin desktop {
-    @media only screen and (min-width:#{$desktop}){
+    @media only screen and (min-width:#{$desktop}) {
         @content;
+    }
+}
+
+//Menus
+
+@mixin menus() {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    flex: 1;
+
+    @include desktop() {
+        flex: 0 1 calc(30% -1rem);
+    }
+
+    a {
+        color: $negro;
+        text-decoration: none;
+        margin-bottom: .5rem;
     }
 }
