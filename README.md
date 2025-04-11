@@ -1,4 +1,4 @@
-# Sitio web with SASS, Gulp and Flexbox. https://jorneylm.github.io/proyecto-sitio-web/
+# Sitio web with SASS, Gulp and Flexbox. https://jorneycr.github.io/proyecto-sitio-web/
 
 ## Run SCSS
 
